@@ -1,78 +1,75 @@
 {
   "sections": {
     "image_banner": {
-      "type": "image-banner",
+      "type": "banner",
       "blocks": {
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner",
-            "heading_size": "h0"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "button_link": "shopify://collections/all",
           }
         }
       },
       "block_order": [
-        "heading",
-        "text",
-        "button"
+        "heading"
       ],
-      "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
-      }
     },
     "rich_text": {
       "type": "rich-text",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "richtext": {
+          "type": "richtext",
           "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
+            "title": "Raquetas.Accesorios. Pelotas.",
+            "subtitle": "Conoce nuestras raquetas y aprende a jugar Tennis cómo un profesional."
           }
         },
-        "text": {
-          "type": "text",
+        "cta-link": {
+          "type": "cta-link",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+            "button_label": "HISTORIA",
+            "button_link": "shopify://pages/about-us"
+          }
+        },
+        "decoration": {
+          "type": "decoration",
+          "settings": {
+            "decoration": "TENNIS"
           }
         }
       },
       "block_order": [
-        "heading",
-        "text"
+        "richtext",
+        "cta-link",
+        "decoration"
       ],
-      "settings": {
-        "color_scheme": "scheme-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
-      }
+    },
+    "sliders": {
+      "type": "slider-products",
+      "blocks": {
+        "banners": {
+          "type": "banners",
+          "settings": {
+            "banners": [
+              {
+                "image": "https://cdn.shopify.com/s/files/1/0533/2089/5880/files/tennis-1.jpg?v=1623150000",
+                "link": "shopify://collections/all"
+              },
+              {
+                "image": "https://cdn.shopify.com/s/files/1/0533/2089/5880/files/tennis-2.jpg?v=1623150000",
+                "link": "shopify://collections/all"
+              },
+              {
+                "image": "https://cdn.shopify.com/s/files/1/0533/2089/5880/files/tennis-3.jpg?v=1623150000",
+                "link": "shopify://collections/all"
+              }
+            ]
+          }
+        },
+      },
+      "block_order": [
+        "banners"
+      ],
     },
     "featured_collection": {
       "type": "featured-collection",
@@ -202,6 +199,7 @@
   "order": [
     "image_banner",
     "rich_text",
+    "sliders",
     "featured_collection",
     "collage",
     "video",

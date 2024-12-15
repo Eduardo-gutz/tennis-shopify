@@ -1,0 +1,72 @@
+{{ 'banner.css' | asset_url | stylesheet_tag }}
+
+<div class="image-banner-wrapper">
+  <img
+    class="image-banner"
+    src="{{'head-banner.png' |  asset_url}}"
+    alt=""
+    class="image-banner"
+    width="100%"
+    height="auto"
+  >
+  <span class="banner__line"></span>
+  {% if section.blocks[0] != blank %}
+    <div class="banner__content">
+      <h1 class="banner__heading">
+        {{ section.blocks[0].settings.heading }}
+      </h1>
+      {% render 'button-link',
+        label: section.blocks[0].settings.button_label,
+        url: section.blocks[0].settings.button_link
+      %}
+    </div>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "Image banner",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "t:sections.image-banner.blocks.heading.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "heading",
+          "default": "Las mejores raquetas para jugar Tennis",
+          "label": "Las mejores raquetas para jugar Tennis"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "default": "ACERCA DE NOSOTROS",
+          "label": "Banner CTA"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Link CTA"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.image-banner.presets.name",
+      "blocks": [
+        {
+          "type": "heading"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

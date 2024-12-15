@@ -1,0 +1,6 @@
+{{ 'buttons.css' | asset_url | stylesheet_tag }}
+
+<a class="button-link {% if black != blank %}black{% endif %}" href="{{url}}">
+  {{ label }}
+  {{ 'icon-arrow.svg' | inline_asset_content }}
+</a>

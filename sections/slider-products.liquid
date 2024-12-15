@@ -1,0 +1,38 @@
+{% liquid
+  assign banners = section.blocks[0].settings
+%}
+
+<div>
+  {% render 'slide-banners', banners: banners %}
+</div>
+
+{% schema %}
+{
+  "name": "Slider Products",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "banners",
+      "name": "Banners",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Banner Background"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Banner Title"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Banner Text"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
