@@ -15,7 +15,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Las mejores raquetas para jugar Tennis",
+            "heading": "Las mejores raquetas para jugar <strong>Tennis</strong>",
             "button_label": "ACERCA DE NOSOTROS",
             "button_link": "shopify://collections/all"
           }
