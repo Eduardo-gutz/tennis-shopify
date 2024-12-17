@@ -15,7 +15,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Las mejores raquetas para jugar Tennis",
+            "heading": "Las mejores raquetas para jugar <strong>Tennis</strong>",
             "button_label": "ACERCA DE NOSOTROS",
             "button_link": "shopify://collections/all"
           }
@@ -51,7 +51,7 @@
           "type": "decoration",
           "settings": {
             "decoration": "TENNIS",
-            "color": "#CBE346"
+            "color": "#cbe346"
           }
         }
       },
@@ -107,6 +107,7 @@
     "banner": {
       "type": "banner",
       "settings": {
+        "image": "shopify://shop_images/action-athlete-ball-342361.png",
         "image_position": "left",
         "max_height": 586,
         "show_decoration": "false"
