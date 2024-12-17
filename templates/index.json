@@ -51,7 +51,7 @@
           "type": "decoration",
           "settings": {
             "decoration": "TENNIS",
-            "color": "#CBE346"
+            "color": "#cbe346"
           }
         }
       },
@@ -107,6 +107,7 @@
     "banner": {
       "type": "banner",
       "settings": {
+        "image": "shopify://shop_images/action-athlete-ball-342361.png",
         "image_position": "left",
         "max_height": 586,
         "show_decoration": "false"
