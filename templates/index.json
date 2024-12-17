@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "image_banner": {
@@ -6,13 +15,20 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "button_link": "shopify://collections/all",
+            "heading": "Las mejores raquetas para jugar Tennis",
+            "button_label": "ACERCA DE NOSOTROS",
+            "button_link": "shopify://collections/all"
           }
         }
       },
       "block_order": [
         "heading"
       ],
+      "settings": {
+        "image_position": "center",
+        "max_height": 785,
+        "show_decoration": "true"
+      }
     },
     "rich_text": {
       "type": "rich-text",
@@ -34,7 +50,8 @@
         "decoration": {
           "type": "decoration",
           "settings": {
-            "decoration": "TENNIS"
+            "decoration": "TENNIS",
+            "color": "#CBE346"
           }
         }
       },
@@ -43,27 +60,56 @@
         "cta-link",
         "decoration"
       ],
+      "settings": {}
     },
     "sliders": {
       "type": "slider-products",
-      "settings": {
-        "collection": "all",
-      },
       "blocks": {
         "banners": {
           "type": "banners",
+          "settings": {
+            "title": "<p>Nuestras <strong>Raquetas</strong></p>",
+            "text": "Conoce nuestras raquetas y aprende a jugar Tennis cómo un profesional."
+          }
         },
+        "banners_6gMQTg": {
+          "type": "banners",
+          "settings": {
+            "title": "<p>Nuestras <strong>Raquetas</strong></p>",
+            "text": "Conoce nuestras raquetas y aprende a jugar Tennis cómo un profesional."
+          }
+        },
+        "banners_TgznEk": {
+          "type": "banners",
+          "settings": {
+            "title": "<p>Nuestras <strong>Raquetas</strong></p>",
+            "text": "Conoce nuestras raquetas y aprende a jugar Tennis cómo un profesional."
+          }
+        },
+        "banners_cqFarD": {
+          "type": "banners",
+          "settings": {
+            "title": "<p>Nuestras <strong>Raquetas</strong></p>",
+            "text": "Conoce nuestras raquetas y aprende a jugar Tennis cómo un profesional."
+          }
+        }
       },
       "block_order": [
-        "banners"
+        "banners",
+        "banners_6gMQTg",
+        "banners_TgznEk",
+        "banners_cqFarD"
       ],
+      "settings": {
+        "collection": "all"
+      }
     },
     "banner": {
       "type": "banner",
       "settings": {
-        "max_height": 586,
-        "show_decoration": "false",
         "image_position": "left",
+        "max_height": 586,
+        "show_decoration": "false"
       }
     }
   },
