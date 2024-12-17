@@ -1,15 +1,12 @@
 {{ 'banner.css' | asset_url | stylesheet_tag }}
 
-<div class="image-banner-wrapper">
-  <img
-    class="image-banner"
-    src="{{'head-banner.png' |  asset_url}}"
-    alt=""
-    class="image-banner"
-    width="100%"
-    height="auto"
-  >
-  <span class="banner__line"></span>
+<div
+  class="image-banner-wrapper"
+  style="height: {{ section.settings.max_height }}px; background-image: url({% if section.settings.image != blank %}{{ section.settings.image | image_url }}{% else %}{{ 'head-banner.png' | asset_url }}{% endif %}); background-position: {{ section.settings.image_position }};"
+>
+  {% if section.settings.show_decoration == 'true' %}
+    <span class="banner__line"></span>
+  {% endif %}
   {% if section.blocks[0] != blank %}
     <div class="banner__content">
       <h1 class="banner__heading">
@@ -31,7 +28,55 @@
   "disabled_on": {
     "groups": ["header", "footer"]
   },
-  "settings": [],
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.image-banner.settings.image.label"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "t:sections.image-banner.settings.image.label",
+      "default": "center",
+      "options": [
+        {
+          "value": "center",
+          "label": "Centro"
+        },
+        {
+          "value": "left",
+          "label": "Izquierda"
+        },
+        {
+          "value": "right",
+          "label": "Derecha"
+        }
+      ]
+    },
+    {
+      "type": "number",
+      "id": "max_height",
+      "label": "t:sections.image-banner.settings.image.label",
+      "default": 785
+    },
+    {
+      "type": "select",
+      "id": "show_decoration",
+      "label": "t:sections.image-banner.settings.image.label",
+      "default": "true",
+      "options": [
+        {
+          "value": "true",
+          "label": "Mostrar decoración"
+        },
+        {
+          "value": "false",
+          "label": "Ocultar decoración"
+        }
+      ]
+    }
+  ],
   "blocks": [
     {
       "type": "heading",

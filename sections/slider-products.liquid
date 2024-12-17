@@ -1,15 +1,25 @@
+{{ 'slider.css' | asset_url | stylesheet_tag }}
+
 {% liquid
-  assign banners = section.blocks[0].settings
+  assign banners = section.blocks
+  assign products = section.settings.collection.products
 %}
 
-<div>
+<div class="sliders">
   {% render 'slide-banners', banners: banners %}
+  {% render 'slide-products', products: products %}
 </div>
 
 {% schema %}
 {
   "name": "Slider Products",
-  "settings": [],
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "t:sections.featured-collection.settings.collection.label"
+    }
+  ],
   "blocks": [
     {
       "type": "banners",
@@ -22,7 +32,7 @@
           "label": "Banner Background"
         },
         {
-          "type": "text",
+          "type": "richtext",
           "id": "title",
           "label": "Banner Title"
         },

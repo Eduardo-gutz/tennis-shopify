@@ -1,19 +1,29 @@
 {{ 'header.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'header.js' | asset_url }}" defer="defer"></script>
 
 <header class="main-navigation">
-  <image src="{{ 'tennis-logo.svg' |  asset_url }}" alt="logo" class="logo" />
+  <div class="main-navigation__brand">
+    <button class="main-navigation__menu-button" type="button" id="toggle-navigation" aria-label="Toggle navigation">
+      {{- 'icon-hamburger.svg' | inline_asset_content -}}
+    </button>
+    <image src="{{ 'tennis-logo.svg' |  asset_url }}" alt="logo" class="logo" />
+  </div>
 
-  <nav class="main-navigation__nav">
+  <nav class="main-navigation__nav" id="navigation">
     <ul class="main-navigation__nav__list">
       {% for link in linklists['main-menu'].links -%}
         <li class="main-navigation__nav__item {%if link.active %} active {% endif %}">
           {{ link.title | link_to: link.url }}
         </li>
       {%- endfor %}
+      <span class="main-navigation__nav__list main-navigation__nav__list--langs lang-mobile">
+        <li class="main-navigation__nav__item"><button type="button">ES</button></li>
+        <li class="main-navigation__nav__item"><button type="button">EN</button></li>
+      </span>
     </ul>
   </nav>
 
-  <ul class="main-navigation__nav__list main-navigation__nav__list--langs">
+  <ul class="main-navigation__nav__list main-navigation__nav__list--langs lang-desktop">
     <li class="main-navigation__nav__item"><button type="button">ES</button></li>
     <li class="main-navigation__nav__item"><button type="button">EN</button></li>
   </ul>

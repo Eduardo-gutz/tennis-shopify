@@ -95,6 +95,10 @@ button {
   padding: 0 1.5rem;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
   max-width: 100%;
 }

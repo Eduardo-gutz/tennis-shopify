@@ -21,6 +21,6 @@
 }
 
 .black {
-  border-color: #282e47;
-  color: #282e47;
+  border-color: #282e47 !important;
+  color: #282e47 !important;
 }

@@ -1,0 +1,36 @@
+{{ 'splide.css' | asset_url | stylesheet_tag }}
+{{ 'slider.css' | asset_url | stylesheet_tag }}
+
+<script src="{{ 'splide.js' | asset_url }}" defer="defer"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var splide = new Splide('#products', {
+      arrows: false,
+      pagination: false,
+      autoWidth: true,
+      padding: { left: 52, right: 52 },
+      gap: 36,
+      classes: {
+        arrows: 'splide__arrows custom-arrows__container',
+        arrow: 'splide__arrow custom-arrows',
+        page: 'splide__pagination__page custom-page',
+        pagination: 'splide__pagination custom-pagination',
+      },
+    });
+    splide.mount();
+  });
+</script>
+
+<div class="slide-product__container">
+  <section class="splide" id="products" aria-label="Splide Basic HTML Example">
+    <div class="splide__track">
+      <ul class="splide__list">
+        {% for product in products %}
+          <li class="splide__slide">
+            {% render 'card-image', image: product.featured_media, index: forloop.index, url: product.url %}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+</div>
